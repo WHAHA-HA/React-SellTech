@@ -1,3 +1,6 @@
+# SellTech React
+An E-commerce static website made using react as frontend library and Google Firebase as backend.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
