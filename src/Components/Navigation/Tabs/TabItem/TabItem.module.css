@@ -1,0 +1,45 @@
+.TabItem {
+    width: 80%;
+    margin: 5px auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+.TabItem a {
+    color: black;
+    padding: 5px 0;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.TabItem a:active,
+.TabItem a.active,
+.TabItem a:hover {
+    color: #40A4C8;
+    border-bottom: 4px solid #40A4C8;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+
+@media (min-width: 700px) {
+
+    .TabItem {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .TabItem a {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        padding: 16px 10px;
+    }
+}

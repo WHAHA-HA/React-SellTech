@@ -1,0 +1,32 @@
+.QtyCounter {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.QtyCounter p {
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 3px;
+    text-align: center;
+}
+
+.QtyCounter button {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    width: 32px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.QtyCounter button:disabled {
+    cursor: not-allowed;
+}

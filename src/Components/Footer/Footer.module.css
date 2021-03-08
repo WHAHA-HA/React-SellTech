@@ -1,0 +1,51 @@
+.Footer {
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    background-color: #f7f7f7;
+}
+
+.Footer .List {
+    width: 80%;
+    margin: 0 15px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.Footer .List h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.Footer .List ul {
+    padding: 0;
+    list-style: none;
+}
+
+.Footer .List ul li {
+    margin: 10px 0;
+}
+
+.Footer .List .Link {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.Copyrigth {
+    text-align: center;
+    margin: 5px;
+}
+
+.Copyrigth span {
+    display: inline-block;
+    font-size : 18px;
+}
+
+@media (min-width: 700px) {
+    .Footer .List {
+        width: 25%;
+        margin: 10px 100px;
+    }
+}

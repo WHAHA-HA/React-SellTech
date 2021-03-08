@@ -1,0 +1,35 @@
+.Modal {
+    width: 80%;
+    top: 12%;
+    left: 10%;
+    position: fixed;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 2px 2px 2px black;
+    transition: all 1s ease-out;
+    z-index: 35;
+}
+
+.Closed {
+    transform: translateY(-100vh);
+    opacity: 0;
+}
+
+.Open {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media (min-width: 700px) {
+    .Modal {
+        width: 750px;
+        left: calc(50% - 375px);
+        padding: 14px;
+        top: 15%;
+    }
+}

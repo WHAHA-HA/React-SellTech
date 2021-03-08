@@ -1,25 +1,62 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as authActions from './store/actions/auth'
 
-function App() {
+import Layout from './Container/Layout/Layout';
+import Main from './Container/Main/Main';
+import Browse from './Container/Browse/Browse';
+import ProductPage from './Container/ProductPage/ProductPage';
+import Cart from './Container/Cart/Cart';
+import MyOrders from './Container/MyOrders/MyOrders';
+import AuthForm from './Container/AuthForm/AuthForm';
+import Logout from './Container/AuthForm/Logout/Logout';
+
+const App = (props) => {
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => props.onAutoLogIn(), [])
+
+  var routes = (
+    <Switch >
+      <Route path="/" exact component={Main} />
+      <Route path="/browse/:category?" component={Browse} />
+      <Route path="/product" component={ProductPage} />
+      <Route path="/my-cart" component={Cart} />
+      <Route path="/authenticate" component={AuthForm} />
+    </Switch>
+  )
+
+  if (props.isAuthenticated)
+    routes = (
+      <Switch >
+        <Route path="/" exact component={Main} />
+        <Route path="/browse/:category?" component={Browse} />
+        <Route path="/product" component={ProductPage} />
+        <Route path="/my-cart" component={Cart} />
+        <Route path="/my-orders" component={MyOrders} />
+        <Route path="/log-out" component={Logout} />
+        <Route path="/authenticate" component={AuthForm} />
+      </Switch>
+    )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      {routes}
+    </Layout>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    isAuthenticated: state.authState.token !== null,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onAutoLogIn: () => dispatch(authActions.checkLocalAuthState())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

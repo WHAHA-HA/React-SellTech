@@ -1,0 +1,14 @@
+.MyOrders {
+    margin: 40px auto;
+    box-sizing: border-box;
+    padding: 15px 0;
+    width: 90%;
+}
+
+.MyOrders h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}

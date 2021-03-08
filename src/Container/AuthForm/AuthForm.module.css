@@ -1,0 +1,41 @@
+.AuthForm {
+    margin: 170px auto;
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.AuthForm form {
+    margin: 20px;
+}
+
+.AuthForm .SignUpLink {
+    padding: 0 5px;
+    color: #e6b04b;
+    text-decoration: underline;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+@media (min-width: 500px) {
+    .AuthForm {
+        margin: 20px auto;
+        padding: 40px;
+        width: 500px;
+    }
+}
+
+@media (min-width: 900px) {
+    .AuthForm {
+        margin: 20px auto;
+        padding: 40px;
+        width: 800px;
+    }
+}
+
+.Error {
+    color: #974f56;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 3px;
+}

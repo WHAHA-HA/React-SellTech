@@ -1,0 +1,51 @@
+.FormField {
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    font: inherit;
+    box-sizing: border-box;
+    outline: none;
+    border: 1px solid #aaa;
+    background-color: white;
+    border-radius: -1%;
+}
+
+.FormField:focus {
+    outline: none;
+    border: 2px solid rgb(4, 151, 201);
+}
+
+.Label {
+    text-transform: capitalize;
+    display: block;
+    font: inherit;
+    margin: auto;
+    font-weight: bold;
+    width: 80%;
+    text-align: left;
+}
+
+.Required {
+    color: rgb(148, 21, 21);
+    font-size: 13px;
+    margin: 5px;
+}
+
+.Invalid {
+    outline: none;
+    border: 2px solid red;
+    background-color:pink;
+}
+
+.Invalid:focus {
+    outline: none;
+    border: 2px solid red;
+}
+
+.InvalidMessage {
+    color: red;
+    font-size: 13px;
+    margin: auto;
+    width: 80%;
+    text-align: left;
+}

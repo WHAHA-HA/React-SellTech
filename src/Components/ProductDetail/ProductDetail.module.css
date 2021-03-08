@@ -1,0 +1,57 @@
+.ProductDetail {
+    display: flex;
+    box-sizing: border-box;
+    margin: 10px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.ProductDetail img {
+    width: 70%;
+    margin: 0 0 20px 0;
+}
+
+.ProductDetail .Detail {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: center;
+    border: 6px double #d4d2d2;
+    height: 90%;
+}
+
+.ProductDetail .Link {
+    display: block;
+    text-decoration: underline;
+    color: #e2a22c;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.SuccessMessage {
+    margin: 5px;
+    padding: 5px 10px;
+    background-color: #d4edda;
+    color: #3e774b;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+@media (min-width: 700px) {
+    .ProductDetail {
+        flex-flow: row;
+        height: 70vh;
+        max-height: 600px;
+    }
+
+    .ProductDetail .Detail {
+        width: 300px;
+    }
+
+    .ProductDetail img {
+        max-width: 50%;
+        margin: 0 20px 0 0;
+    }
+}

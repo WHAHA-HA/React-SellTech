@@ -1,0 +1,17 @@
+.Tabs {
+    margin: 10px auto;
+    padding: 10px 0;
+    height: 100%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+}
+
+@media (min-width: 700px) {
+    .Tabs {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}

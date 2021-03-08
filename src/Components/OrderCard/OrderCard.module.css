@@ -1,0 +1,49 @@
+.OrderCard {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 15px auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 3px #ccc;
+}
+
+.OrderCard .Title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.OrderCard .OrderTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+}
+
+.OrderCard .OrderTable th {
+    padding: 10px 5px;
+}
+
+.OrderCard .OrderTable td {
+    padding: 20px 0;
+}
+
+.OrderCard .OrderTable tr {
+    border-bottom: 1px solid #d4d2d2;
+}
+
+
+.OrderCard .PriceDetail {
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+@media (min-width: 700px) {
+    .OrderCard {
+        width: 70%;
+        padding: 20px 30px;
+    }
+}

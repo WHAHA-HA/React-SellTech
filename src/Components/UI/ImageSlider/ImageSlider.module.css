@@ -1,0 +1,102 @@
+.ImageSlider {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: auto;
+}
+
+.darker {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 8;
+}
+
+.ImageSlider img {
+    width: 100%;
+    height: 100%;
+}
+
+.sliderButton {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    /* margin-top: -22px; */
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    z-index: 12;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 18px;
+    padding: 8px 0px;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.text h2 span {
+    display: inline-block;
+}
+
+/* Fading animation */
+.slide {
+    -webkit-animation-name: slide;
+    -webkit-animation-duration: 1.5s;
+    animation-name: slide;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes slide {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes slide {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+@media (min-width: 700px) {
+    .ImageSlider {
+        height: 60vh;
+    }
+
+    .text {
+        font-size: 26px;
+        top: 25%;
+    }
+}
+
+@media (min-width: 1080px) {
+    .ImageSlider {
+        height: 100vh;
+    }
+}
+  
+  
