@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as authActions from './store/actions/auth'
@@ -8,9 +8,10 @@ import Main from './Container/Main/Main';
 import Browse from './Container/Browse/Browse';
 import ProductPage from './Container/ProductPage/ProductPage';
 import Cart from './Container/Cart/Cart';
-import MyOrders from './Container/MyOrders/MyOrders';
 import AuthForm from './Container/AuthForm/AuthForm';
 import Logout from './Container/AuthForm/Logout/Logout';
+
+const MyOrders = React.lazy(() => import('./Container/MyOrders/MyOrders'))
 
 const App = (props) => {
 
@@ -34,9 +35,10 @@ const App = (props) => {
         <Route path="/browse/:category?" component={Browse} />
         <Route path="/product" component={ProductPage} />
         <Route path="/my-cart" component={Cart} />
-        <Route path="/my-orders" component={MyOrders} />
+        <Suspense fallback={<p>Loading...</p>}>
+          <Route path="/my-orders" component={MyOrders} />
+        </Suspense>
         <Route path="/log-out" component={Logout} />
-        <Route path="/authenticate" component={AuthForm} />
       </Switch>
     )
 
