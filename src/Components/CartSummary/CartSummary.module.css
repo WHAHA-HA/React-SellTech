@@ -90,7 +90,7 @@
     }
 
     .CartProduct img {
-        height: 200px;
+        height: 120px;
         display: inline-block;
         margin: 0 10px 0 0;
         width: auto;
@@ -103,5 +103,12 @@
     .TotalsDetail {
         width: 33.33%;
         margin-left: auto;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .CartProduct img {
+        height: 200px;
     }
 }

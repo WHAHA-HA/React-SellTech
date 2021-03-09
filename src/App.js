@@ -11,6 +11,8 @@ import Cart from './Container/Cart/Cart';
 import AuthForm from './Container/AuthForm/AuthForm';
 import Logout from './Container/AuthForm/Logout/Logout';
 
+import Spinner from './Components/UI/Spinner/Spinner';
+
 const MyOrders = React.lazy(() => import('./Container/MyOrders/MyOrders'))
 
 const App = (props) => {
@@ -30,16 +32,18 @@ const App = (props) => {
 
   if (props.isAuthenticated)
     routes = (
-      <Switch >
-        <Route path="/" exact component={Main} />
-        <Route path="/browse/:category?" component={Browse} />
-        <Route path="/product" component={ProductPage} />
-        <Route path="/my-cart" component={Cart} />
-        <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<Spinner />}>
+        <Switch >
+          <Route path="/" exact component={Main} />
+          <Route path="/browse/:category?" component={Browse} />
+          <Route path="/product" component={ProductPage} />
+          <Route path="/my-cart" component={Cart} />
+          <Route path="/authenticate" component={AuthForm} />
+          <Route path="/log-out" component={Logout} />
           <Route path="/my-orders" component={MyOrders} />
-        </Suspense>
-        <Route path="/log-out" component={Logout} />
-      </Switch>
+        </Switch>
+      </Suspense>
+
     )
 
   return (
