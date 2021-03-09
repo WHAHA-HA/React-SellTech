@@ -24,3 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 projectConfig.js
+.firebaserc
+firebase.json
+.firebase/hosting.YnVpbGQ.cache

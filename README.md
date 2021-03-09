@@ -1,6 +1,9 @@
 # SellTech React
 An E-commerce static website made using react as frontend library and Google Firebase as backend.
 
+# LIVE DEMO
+For live demo of the website click [here](https://shopify-2f2b5.web.app/).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
