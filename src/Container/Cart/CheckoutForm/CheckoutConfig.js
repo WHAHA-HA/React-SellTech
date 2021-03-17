@@ -25,9 +25,10 @@ export const CheckoutFormConfig = {
             value: ''
         },
         valid: true,
-        validityMessage: 'This value is required!',
+        validityMessage: 'This value is required and should be a valid email!',
         validatingRules: {
             required: true,
+            isEmail: true,
         }
     },
 
