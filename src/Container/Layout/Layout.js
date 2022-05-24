@@ -20,7 +20,8 @@ const Layout = (props) => {
             <Toolbar 
                 isAuthenticated={props.isAuthenticated} 
                 itemsInCart={props.itemsInCart} 
-                burgerClicked={toggleSideDrawer} />
+                burgerClicked={toggleSideDrawer}
+            />
             <SideDrawer 
                 isAuthenticated={props.isAuthenticated} 
                 itemsInCart={props.itemsInCart} 

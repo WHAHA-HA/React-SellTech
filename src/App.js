@@ -34,13 +34,13 @@ const App = (props) => {
     routes = (
       <Suspense fallback={<Spinner />}>
         <Switch >
-          <Route path="/" exact component={Main} />
-          <Route path="/browse/:category?" component={Browse} />
-          <Route path="/product" component={ProductPage} />
-          <Route path="/my-cart" component={Cart} />
-          <Route path="/authenticate" component={AuthForm} />
-          <Route path="/log-out" component={Logout} />
-          <Route path="/my-orders" component={MyOrders} />
+          <Route data-testid="auth-routes" path="/" exact component={Main} />
+          <Route data-testid="auth-routes" path="/browse/:category?" component={Browse} />
+          <Route data-testid="auth-routes" path="/product" component={ProductPage} />
+          <Route data-testid="auth-routes" path="/my-cart" component={Cart} />
+          <Route data-testid="auth-routes" path="/authenticate" component={AuthForm} />
+          <Route data-testid="auth-routes" path="/log-out" component={Logout} />
+          <Route data-testid="auth-routes" path="/my-orders" component={MyOrders} />
         </Switch>
       </Suspense>
 
@@ -66,3 +66,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+export { App }

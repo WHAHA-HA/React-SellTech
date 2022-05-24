@@ -70,3 +70,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(Main, axiosProduct));
+export { Main }

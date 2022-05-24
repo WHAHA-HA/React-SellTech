@@ -8,7 +8,7 @@ import classes from './Toolbar.module.css';
 
 const toolbar = (props) => {
     return (
-        <header className={classes.Toolbar}>
+        <header className={classes.Toolbar} data-testid="toolbar">
             <DrawerToggler clicked={props.burgerClicked} />
             <Logo fontSize="25px" />
             <nav>
